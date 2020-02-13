@@ -20,14 +20,67 @@ class AccountController extends Controller {
     this.success(rspData);
   }
 
-  async userLogin() {
-    // const { ctx, accountService } = this;
+  // 登录 login
+  async login() {
     const { ctx } = this;
-    const account = ctx.query.account || '';
+    const account = ctx.request.body || '';
     console.log("post--test")
 
-    // const res = await accountService.getAccount({ account });
-    const res  = {account:222}
+    const res  = {account:account}
+    const rspData = res.account;
+    this.success(rspData);
+  }
+// 注册 reg
+  async reg() {
+    const { ctx } = this;
+    const account = ctx.request.body || '';
+    console.log("post--test")
+
+    const res  = {account:account}
+    const rspData = res.account;
+    this.success(rspData);
+  }
+    // 退出 logout
+
+  async logout() {
+    const { ctx } = this;
+    const account = ctx.request.body || '';
+    console.log("post--test")
+
+    const res  = {account:account}
+    const rspData = res.account;
+    this.success(rspData);
+  }
+    // 信息 info
+
+  async info() {
+    const { ctx } = this;
+    const account = ctx.request.body || '';
+    console.log("post--test")
+
+    const res  = {account:account}
+    const rspData = res.account;
+    this.success(rspData);
+  }
+
+  // 重设密码 resetpw
+  async resetpw() {
+    const { ctx } = this;
+    const account = ctx.request.body || '';
+    console.log("post--test")
+
+    const res  = {account:account}
+    const rspData = res.account;
+    this.success(rspData);
+  }
+
+  // 注册Key regkey
+  async regkey() {
+    const { ctx } = this;
+    const account = ctx.request.body || '';
+    console.log("post--test")
+
+    const res  = {account:account}
     const rspData = res.account;
     this.success(rspData);
   }
