@@ -18,13 +18,12 @@ module.exports = appInfo => {
   // add your middleware config here
   config.middleware = [];
 
-  // add your user config here
-  const userConfig = {
-    // myAppName: 'egg',
+  config.validate = {
+    convert: true, // 自动对传入参按希望的类型进行转换
+    // widelyUndefined: true, // 把空字符串，NaN, null这些转成 undefined
   };
 
   return {
-    ...config,
-    ...userConfig,
+    ...config
   };
 };
